@@ -21,6 +21,17 @@ app.get('/users', function(req,res){
  	})
 })
 
+// words with colon in front of them in URL are treated as variables
+// variables can be accessed through req.params
+app.get('/users/:id',function(req,res){
+	console.log(req.params.id)
+	res.json({
+		success: true,
+		message: 'got one user',
+		user: req.params.id
+	})
+})
+
 app.listen(8000, function(){
   console.log("server is listening")
 })
