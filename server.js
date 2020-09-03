@@ -31,7 +31,10 @@ app.get('/users/:id',function(req,res){
 		user: req.params.id
 	})
 })
+// Dynamic variables can be used to search for and return specific data associated with an id in the database
 
 app.listen(8000, function(){
   console.log("server is listening")
 })
+
+// run by typing node server.js in cmd, access at base url http://localhost:8000
